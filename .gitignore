@@ -1,3 +1,7 @@
+.vscode/
+.pio/
+lib/readme.txt
+
 # Prerequisites
 *.d
 
@@ -30,3 +34,8 @@
 *.exe
 *.out
 *.app
+.pioenvs
+.piolibdeps
+.clang_complete
+.gcc-flags.json
+.vscode
