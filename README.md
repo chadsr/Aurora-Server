@@ -72,3 +72,6 @@ Unsigned integer colour values representing an RGB colour.
 The LED index to start applying the given colour to.
 #### endPosition
 The LED index to finish applying the given colour to.
+
+## UDP Streaming
+*UDP streaming is still experimental and has not been tested. Development of a client application can be found in [this repository](https://github.com/Chadsr/Aurora-Client).*
