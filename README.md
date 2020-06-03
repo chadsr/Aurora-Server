@@ -1,5 +1,5 @@
 # Aurora
-[![Build Status](https://travis-ci.org/Chadsr/LiFi-Server.svg?branch=master)](https://travis-ci.org/Chadsr/LiFi-Server)
+[![Build Status](https://travis-ci.org/Chadsr/Aurora-Server.svg?branch=master)](https://travis-ci.org/Chadsr/Aurora-Server)
 
 ### A wireless, ESP32 controlled, addressable RGB LED strip server (UDP streaming &amp; JSON API)
 
