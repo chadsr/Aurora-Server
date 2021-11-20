@@ -41,6 +41,9 @@ void setup()
   setupWireless();
   setupServer();
   toggleOnOff();
+
+  // We are taking advantage of the freeRTOS API function to spin up a separate thread for listening for http API clients
+  xTaskCreate(apiListenerLoop, "HTTP API Server Listener", 4096, NULL, 1, NULL);
 }
 
 /*
@@ -58,7 +61,4 @@ void apiListenerLoop(void *pvParameters)
 void loop()
 {
   handleUDPPacket();
-
-  // We are taking advantage of the freeRTOS API function to spin up a separate thread for listening for http API clients
-  xTaskCreate(apiListenerLoop, "HTTP API Server Listener", 4096, NULL, 1, NULL);
 }
