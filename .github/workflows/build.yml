@@ -1,0 +1,23 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - "main"
+      - "master"
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: PlatformIO Run
+        uses: karniv00l/platformio-run-action@0.1.0
+        with:
+          project-dir: "./src"
+          project-conf: "./platformio.ini"
+          silent: false
+          verbose: true
+          disable-auto-clean: false

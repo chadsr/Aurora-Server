@@ -1,5 +1,4 @@
 # Aurora
-[![Build Status](https://travis-ci.org/Chadsr/Aurora-Server.svg?branch=master)](https://travis-ci.org/Chadsr/Aurora-Server)
 
 ### A wireless, ESP32 controlled, addressable RGB LED strip server (UDP streaming &amp; JSON API)
 
@@ -27,11 +26,11 @@ platformio run --target upload
 
 ## API Endpoints
 
-|Endpoint|Type|Description|Example Return Value|
-|--------|----|-----------|--------------------|
-|`/leds`|`GET`|Returns a count of the available induvidual LEDs|`{"count": 720}`|
-|`/leds`|`POST`|Accepts a list of RGB colour assignments for sequences of LEDs <sup>[1]</sup>|`{"success": true}`|
-|`/leds/toggle`|`POST`|Toggles all configures LEDs on/off|`{"success": true}`|
+| Endpoint       | Type   | Description                                                                   | Example Return Value |
+| -------------- | ------ | ----------------------------------------------------------------------------- | -------------------- |
+| `/leds`        | `GET`  | Returns a count of the available induvidual LEDs                              | `{"count": 720}`     |
+| `/leds`        | `POST` | Accepts a list of RGB colour assignments for sequences of LEDs <sup>[1]</sup> | `{"success": true}`  |
+| `/leds/toggle` | `POST` | Toggles all configures LEDs on/off                                            | `{"success": true}`  |
 
 ### Example Request: <sup>[1]</sup>
 ```
