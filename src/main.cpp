@@ -8,6 +8,21 @@
 #include "eeprom.h"
 #include "leds.h"
 
+
+
+void apiListenerLoop(void *pvParameters)
+{
+  while (true)
+  { // Infinite loop for the HTTP API listener
+    handleAPIClient();
+  }
+}
+
+void loop()
+{
+  handleUDPPacket();
+}
+
 void setupWireless()
 {
   Serial.printf("Connecting to %s\n", WIFI_SSID);
@@ -44,21 +59,4 @@ void setup()
 
   // We are taking advantage of the freeRTOS API function to spin up a separate thread for listening for http API clients
   xTaskCreate(apiListenerLoop, "HTTP API Server Listener", 4096, NULL, 1, NULL);
-}
-
-/*
-
-*/
-
-void apiListenerLoop(void *pvParameters)
-{
-  while (true)
-  { // Infinite loop for the HTTP API listener
-    handleAPIClient();
-  }
-}
-
-void loop()
-{
-  handleUDPPacket();
 }
