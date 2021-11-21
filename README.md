@@ -1,4 +1,4 @@
-# Aurora
+# Aurora Server (ESP32)
 [![Build](https://github.com/Chadsr/Aurora-Server/actions/workflows/build.yml/badge.svg)](https://github.com/Chadsr/Aurora-Server/actions/workflows/build.yml)
 ### A wireless, ESP32 controlled, addressable RGB LED strip server (UDP streaming &amp; JSON API)
 
